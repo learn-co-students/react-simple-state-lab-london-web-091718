@@ -19,8 +19,8 @@ export default class Matrix extends Component {
 // map to: <Cell value={val} />
 
 Matrix.defaultProps = {
-  values: () => {
-    const defaultColumn = [
+  values: (() => {
+    const defaultRow = [
       "#F00",
       "#F00",
       "#F00",
@@ -32,6 +32,6 @@ Matrix.defaultProps = {
       "#F00",
       "#F00"
     ];
-    return new Array(10).fill(defaultColumn);
-  }
+    return new Array(10).fill(defaultRow);
+  })()
 };
